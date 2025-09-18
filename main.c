@@ -10,6 +10,8 @@ int main(int ac, char **av)
         exit(1);
     }
     info = parse(av[1]);
+    if(!info)
+        return(0);
     game = malloc(sizeof(t_game));
     ft_memset(game, 0, sizeof(t_game));
     game_engine(game, info);
